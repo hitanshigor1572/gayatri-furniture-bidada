@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold font-serif text-stone-800">Gaytri Furniture</span>
+            <span className="text-2xl font-bold font-serif text-stone-800">Gayatri Furniture</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -32,9 +32,8 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-amber-700 ${
-                  location.pathname === link.path ? 'text-amber-800' : 'text-stone-600'
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-amber-700 ${location.pathname === link.path ? 'text-amber-800' : 'text-stone-600'
+                  }`}
               >
                 {link.name}
               </Link>
@@ -124,12 +123,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <h3 className="text-2xl font-serif text-white mb-4">Gaytri Furniture</h3>
+            <h3 className="text-2xl font-serif text-white mb-4">Gayatri Furniture</h3>
             <p className="text-stone-400 mb-6 leading-relaxed">
               Serving Bidada & Kutch since years with premium quality furniture that combines style, comfort, and durability.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center hover:bg-amber-800 transition-colors">
+              <a href={BUSINESS_INFO.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center hover:bg-amber-800 transition-colors">
                 <Instagram size={20} />
               </a>
               <a href={`https://wa.me/${BUSINESS_INFO.whatsapp}`} className="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center hover:bg-amber-800 transition-colors">
@@ -168,7 +167,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-stone-800 text-center text-sm text-stone-500">
-          <p>© {new Date().getFullYear()} Gaytri Furniture. All rights reserved. Best Furniture Shop in Kutch.</p>
+          <p>© {new Date().getFullYear()} Gayatri Furniture. All rights reserved. Best Furniture Shop in Kutch.</p>
         </div>
       </div>
     </footer>

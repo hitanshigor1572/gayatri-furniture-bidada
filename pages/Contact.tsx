@@ -53,14 +53,14 @@ const Contact: React.FC = () => {
       {/* Header */}
       <div className="bg-stone-900 py-24 text-center">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-serif text-white mb-6"
           >
             Get In Touch
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          
+
           {/* Contact Details Cards */}
           <div className="lg:col-span-1 space-y-6">
             {contactMethods.map((method, i) => (
@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Inquiry Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="lg:col-span-2 bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-stone-100"
@@ -115,7 +115,7 @@ const Contact: React.FC = () => {
                   placeholder="Vatsal Rajgor"
                   className="w-full px-5 py-3.5 rounded-xl bg-stone-50 border-stone-200 focus:ring-2 focus:ring-amber-800 focus:bg-white outline-none transition-all"
                   value={formState.name}
-                  onChange={e => setFormState({...formState, name: e.target.value})}
+                  onChange={e => setFormState({ ...formState, name: e.target.value })}
                 />
               </div>
               <div className="space-y-2">
@@ -126,7 +126,7 @@ const Contact: React.FC = () => {
                   placeholder="+91 00000 00000"
                   className="w-full px-5 py-3.5 rounded-xl bg-stone-50 border-stone-200 focus:ring-2 focus:ring-amber-800 focus:bg-white outline-none transition-all"
                   value={formState.phone}
-                  onChange={e => setFormState({...formState, phone: e.target.value})}
+                  onChange={e => setFormState({ ...formState, phone: e.target.value })}
                 />
               </div>
               <div className="md:col-span-2 space-y-2">
@@ -137,7 +137,7 @@ const Contact: React.FC = () => {
                   placeholder="name@example.com"
                   className="w-full px-5 py-3.5 rounded-xl bg-stone-50 border-stone-200 focus:ring-2 focus:ring-amber-800 focus:bg-white outline-none transition-all"
                   value={formState.email}
-                  onChange={e => setFormState({...formState, email: e.target.value})}
+                  onChange={e => setFormState({ ...formState, email: e.target.value })}
                 />
               </div>
               <div className="md:col-span-2 space-y-2">
@@ -148,7 +148,7 @@ const Contact: React.FC = () => {
                   placeholder="Tell us about the furniture you're interested in..."
                   className="w-full px-5 py-3.5 rounded-xl bg-stone-50 border-stone-200 focus:ring-2 focus:ring-amber-800 focus:bg-white outline-none transition-all resize-none"
                   value={formState.message}
-                  onChange={e => setFormState({...formState, message: e.target.value})}
+                  onChange={e => setFormState({ ...formState, message: e.target.value })}
                 />
               </div>
               <div className="md:col-span-2">
@@ -168,37 +168,37 @@ const Contact: React.FC = () => {
       {/* Map Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
         <div className="bg-white p-4 rounded-3xl shadow-xl border border-stone-100 overflow-hidden h-[500px] relative">
-           <div className="absolute top-8 left-8 z-10 bg-white p-6 rounded-2xl shadow-lg max-w-xs hidden md:block">
-              <h3 className="font-serif text-xl mb-2">Our Showroom</h3>
-              <p className="text-stone-500 text-sm leading-relaxed mb-4">
-                 {BUSINESS_INFO.address}
-              </p>
-              <a 
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BUSINESS_INFO.address)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-amber-800 font-bold text-sm flex items-center gap-1 hover:underline"
-              >
-                <MapPin size={16} />
-                Open in Maps
-              </a>
-           </div>
-           {/* Placeholder for map - in real world use Google Maps Iframe or SDK */}
-           <div className="w-full h-full bg-stone-200 flex items-center justify-center">
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.3805871305367!2d69.47129267508787!3d22.899329079260397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395131dcc049d93b%3A0x7484a3a9ccaac000!2sGaytri%20furniture!5e0!3m2!1sen!2sin!4v1767686099462!5m2!1sen!2sin"
-            title="Location Map"
-            className="w-full h-full grayscale contrast-125 opacity-70"
-            allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+          <div className="absolute top-8 left-8 z-10 bg-white p-6 rounded-2xl shadow-lg max-w-xs hidden md:block">
+            <h3 className="font-serif text-xl mb-2">Our Showroom</h3>
+            <p className="text-stone-500 text-sm leading-relaxed mb-4">
+              {BUSINESS_INFO.address}
+            </p>
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BUSINESS_INFO.address)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-800 font-bold text-sm flex items-center gap-1 hover:underline"
+            >
+              <MapPin size={16} />
+              Open in Maps
+            </a>
+          </div>
+          {/* Placeholder for map - in real world use Google Maps Iframe or SDK */}
+          <div className="w-full h-full bg-stone-200 flex items-center justify-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.3805871305367!2d69.47129267508787!3d22.899329079260397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395131dcc049d93b%3A0x7484a3a9ccaac000!2sGayatri%20furniture!5e0!3m2!1sen!2sin!4v1767686099462!5m2!1sen!2sin"
+              title="Location Map"
+              className="w-full h-full grayscale contrast-125 opacity-70"
+              allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-           </div>
+          </div>
         </div>
       </section>
 
       {/* SEO Footer Text */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 text-center">
         <p className="text-stone-400 text-sm font-medium uppercase tracking-[0.2em]">
-           Serving Bidada • Kutch • Mandvi • Mundra • Gujarat
+          Serving Bidada • Kutch • Mandvi • Mundra • Gujarat
         </p>
       </section>
     </div>
